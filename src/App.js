@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+// import Contador from "./components/Contador"
+import { useState } from "react"
+import Comida from "./components/Comida"
+import Contador from "./components/Contador"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const [saludo, setSaludo] = useState('')
+    // const user = true
+
+    const saludar = () => {
+        setSaludo('hello world')
+    } 
+    
+    // const Despedida = () =>  <h3>Adios mundo</h3>
+    
+    const comida = ['🍕','🍔','🍟','🌭']
+
+    return(
+        <>
+
+        <Contador/>
+
+        <div className="container">
+            <h2>Practica React</h2>
+            <ul>
+                <Comida comida={comida} />
+            </ul>
+
+            <h3> {saludo} </h3>
+            {/* {user ? <Saludo/> : <Despedida />} */}
+        <button 
+        // btn btn-danger
+        onClick={saludar}>
+            Enviar
+        </button>
+        </div>
+        </>
+    )
 }
 
-export default App;
+
+
+
+export default App
+
