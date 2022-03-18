@@ -1,16 +1,11 @@
-import FormNoControlado from "./components/FormNoControlado"
-import FormuControlado from "./components/FormuControlado"
-import Formulario from "./components/Formulario"
-import Prueba from "./components/Prueba"
+import TodoList from "./components/TodoList"
+
 
 const App = () => {
   return (
     <div className="container">
-        <h1>Formulario de prueba</h1>
-        {/* <FormNoControlado/>
-        <Prueba/>
-        <Formulario/> */}
-        <FormuControlado/>
+        <h1>App</h1>
+        <TodoList/>
     </div>
   )
 }
